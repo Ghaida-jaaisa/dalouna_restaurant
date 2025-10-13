@@ -98,7 +98,7 @@ header .container ul li a {
   flex-wrap: wrap; */
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 15px;
+  gap: 20px;
 }
 #about .container .row > div {
   padding: 15px;
@@ -136,7 +136,7 @@ header .container ul li a {
 #menu .container #categories {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
+  gap: 20px;
 }
 #menu .menu-category {
   background-color: var(--card);
@@ -170,10 +170,12 @@ header .container ul li a {
 #hours-contact .container .row {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 15px;
+  gap: 20px;
 }
 #hours-contact .container .row section {
   background-color: var(--card);
+    border: 1px solid var(--border);
+
   border-radius: 10px;
   padding: 15px;
 }
