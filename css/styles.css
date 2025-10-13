@@ -203,6 +203,9 @@ table {
 #contact a[href*="mailto"] {
   color: var(--brand-2);
 }
+#contact p:last-of-type {
+    color: var(--muted);
+}
 .find-us .container {
   width: calc(100% - 120px);
   margin: 50px auto;
