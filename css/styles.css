@@ -36,7 +36,8 @@ header {
 }
 
 header .container {
-  width: calc(100% - 20px);
+  max-width: 1200px;
+  height: 50px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -63,7 +64,7 @@ header .container ul li a {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  height: calc(100vh - 50px);
   width: 100%;
   color: white;
   display: flex;
@@ -93,8 +94,8 @@ header .container ul li a {
   width: 50%;
 }
 #about .container {
-  width: calc(100% - 120px);
-  margin: 50px auto;
+  max-width: 1200px;
+  margin: 100px auto;
 }
 #about .container .row {
   /* display: flex;
@@ -106,14 +107,17 @@ header .container ul li a {
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
-#about .container .row > div {
+.card {
   padding: 15px;
   background-color: var(--card);
   border-radius: 10px;
   border: 1px solid var(--border);
   display: flex;
   flex-direction: column;
-  /* min-width: fit-content; */
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.05);
+}
+iframe {
+  border-radius: 10px;
 }
 #about .container .row > div p:last-of-type {
   color: var(--muted);
@@ -129,8 +133,8 @@ header .container ul li a {
   border-radius: 25px;
 }
 #menu .container {
-  width: calc(100% - 120px);
-  margin: 50px auto;
+  max-width: 1200px;
+  margin: 100px auto;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -145,12 +149,7 @@ header .container ul li a {
   gap: 20px;
 }
 #menu .menu-category {
-  background-color: var(--card);
-  border: 1px solid var(--border);
-  display: flex;
-  flex-direction: column;
   padding: 30px 10px;
-  border-radius: 10px;
 }
 #menu .menu-item {
   display: flex;
@@ -170,20 +169,13 @@ header .container ul li a {
   color: var(--brand);
 }
 #hours-contact .container {
-  width: calc(100% - 120px);
-  margin: 0 auto;
+  max-width: 1200px;
+  margin: 100px auto;
 }
 #hours-contact .container .row {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
-}
-#hours-contact .container .row section {
-  background-color: var(--card);
-  border: 1px solid var(--border);
-
-  border-radius: 10px;
-  padding: 15px;
 }
 table {
   width: 100%;
@@ -213,8 +205,8 @@ table {
   color: var(--muted);
 }
 .find-us .container {
-  width: calc(100% - 120px);
-  margin: 50px auto;
+  max-width: 1200px;
+  margin: 100px auto;
 }
 .find-us .row {
   display: grid;
@@ -222,15 +214,9 @@ table {
   gap: 20px;
 }
 .find-us section {
-  display: flex;
-  flex-direction: column;
   justify-content: space-around;
   align-items: flex-start;
-  gap: 20px;
-  background-color: var(--card);
-  border-radius: 10px;
-  border: 1px solid var(--border);
-  padding: 15px;
+  gap: 10px;
 }
 #find-us p:last-of-type {
   color: var(--muted);
@@ -242,7 +228,7 @@ footer {
   padding: 15px;
 }
 footer .container {
-  width: calc(100% - 120px);
+  max-width: 1200px;
   margin: 0 auto;
 }
 footer a {
@@ -254,6 +240,16 @@ footer span {
   color: var(--brand-2);
 }
 /* Media Query */
+@media screen and (max-width: 1200px) {
+  header .container,
+  .find-us .container,
+  #hours-contact .container,
+  #menu .container,
+  #about .container,
+  footer .container {
+    width: calc(100% - 50px);
+  }
+}
 @media screen and (max-width: 900px) {
   #about .container .row {
     grid-template-columns: 1fr;
@@ -274,16 +270,5 @@ footer span {
   }
   header .container ul li {
     margin: 5px;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  header .container,
-  .find-us .container,
-  #hours-contact .container,
-  #menu .container,
-  #about .container,
-  footer .container {
-    width: calc(100% - 50px);
   }
 }
