@@ -39,6 +39,7 @@ git clone https://github.com/ghaida-jaaisa/dalouna-restaurant.git
 
 ## Project Structure
 
+```
 dalouna-restaurant/
 │
 ├── index.html          # Main HTML file
@@ -47,4 +48,4 @@ dalouna-restaurant/
 ├── images/
 │   └── bg.jpg          # Hero background image
 └── README.md           # This file
-
+```
